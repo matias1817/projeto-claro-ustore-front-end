@@ -1,0 +1,33 @@
+<div class="dashboard-container">
+    <header class="dashboard-header">
+      <div class="logo">        <img src="assets/logo_claro.png" alt="Logo" class="login-logo" />
+        <span>  {{username}}</span></div>
+      <a class="logout" href="/">Sair</a>
+    </header>
+  
+    <main class="dashboard-main">
+      <h1>Bem vindo!</h1>
+      <p>
+        Este site tem como objetivo gerenciar as maquinas virtuais do usuario.
+      </p>
+  
+      <a class="create-account" href="/machines">Gerenciar Maquinas</a>
+
+      <div class="charts">
+        <div class="chart-box">
+          <canvas baseChart
+            [data]="barChartData"
+            [type]="barChartType">
+          </canvas>
+        </div>
+  
+        <div class="chart-box">
+          <canvas baseChart
+            [data]="pieChartData"
+            [type]="pieChartType">
+          </canvas>
+        </div>
+      </div>
+    </main>
+  </div>
+  

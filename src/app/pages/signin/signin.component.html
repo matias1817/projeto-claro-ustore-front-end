@@ -1,0 +1,31 @@
+<div class="login-page">
+    <div class="left-side">
+      <img src="assets/mulher.jpg" alt="Mulher com laptop">
+    </div>
+    <div class="right-side">
+      <div class="login-box">
+
+        <img src="assets/logo_cad.png" alt="Logo" class="login-logo" />
+
+  
+        <form (ngSubmit)="login()">
+          <label for="useranme">Nome do Usuário</label>
+          <input type="text" [(ngModel)]="username" name="username" id="username" placeholder="seu nome" required>
+          
+          <label for="Email">Email</label>
+          <input type="email" [(ngModel)]="email" name="email" id="email" placeholder="seu email" required>
+          
+          <label for="CPF">CPF</label>
+          <input type="text" [(ngModel)]="cpf" name="cpf" id="cpf" placeholder="seu cpf" required>  
+  
+          <label for="password">Senha</label>
+          <input type="password" [(ngModel)]="password" name="password" id="password" placeholder="********" required>
+  
+          <button type="submit">Cadastrar</button>
+        </form>
+        <a class="create-account" href="/">Voltar para o Login</a>
+
+     </div>
+    </div>
+  </div>
+  

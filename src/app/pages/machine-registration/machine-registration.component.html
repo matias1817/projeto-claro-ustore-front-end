@@ -1,0 +1,37 @@
+<div class="dashboard-container">
+  <header class="dashboard-header">
+    <div class="logo">
+      <img src="assets/logo_claro.png" alt="Logo" class="login-logo" />
+      <span>{{ username }}</span>
+    </div>
+    <a class="logout" href="/">Sair</a>
+  </header>
+
+  <main class="dashboard-main">
+    <div class="container">
+      <h2>{{ maquinaId ? 'Editar Máquina Virtual' : 'Cadastrar Máquina Virtual' }}</h2>
+
+      <form [formGroup]="maquinaForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="nome">Nome da Máquina</label>
+          <input id="nome" type="text" formControlName="displayName" />
+        </div>
+
+        <div class="form-group">
+          <label for="cpu">CPU</label>
+          <input id="cpu" type="number" min="1" formControlName="cpu" />
+        </div>
+
+        <div class="form-group">
+          <label for="memoria">Memória (GB)</label>
+          <input id="memoria" type="number" min="1" formControlName="memory" />
+        </div>
+
+        <button type="submit" class="btn-criar">
+          {{ maquinaId ? 'Atualizar Máquina' : 'Salvar Máquina' }}
+        </button>
+        <button class="btn-voltar" type="button" (click)="voltar()">Voltar</button>
+      </form>
+    </div>
+  </main>
+</div>

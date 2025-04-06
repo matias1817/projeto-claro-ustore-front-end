@@ -1,0 +1,50 @@
+<div class="dashboard-container">
+    <header class="dashboard-header">
+      <div class="logo">        <img src="assets/logo_claro.png" alt="Logo" class="login-logo" />
+        <span>  Matias Cordeiro</span></div>
+      <a class="logout" href="/">Sair</a>
+    </header>
+  
+    <main class="dashboard-main">
+        <div class="container">
+            <h2>Máquinas Virtuais</h2>
+            <button class="btn-criar"><a href="/registrationMachine">+ Máquina Virtual</a></button>
+          
+            <table class="tabela">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Nome</th>
+                  <th>CPU</th>
+                  <th>Memória</th>
+                  <th>Status</th>
+                  <th>Ações</th>
+                  <th></th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let maquina of maquinas">
+                  <td>
+                    <button (click)="startMachine(maquina.Id)"><i class="fas fa-play"></i></button>
+                    <button (click)="pauseMachine(maquina.Id)"><i class="fas fa-pause"></i></button>
+                    <button (click)="stopMachine(maquina.Id)"><i class="fas fa-stop"></i></button>
+                  </td>
+                  <td>{{ maquina.displayName }}</td>
+                  <td>{{ maquina.cpu }}</td>
+                  <td>{{ maquina.memory }}</td>
+                  <td>{{ maquina.status }}</td>
+                  <td>
+                    <button [routerLink]="['/editar-maquina', maquina.Id]">
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button (click)="deleteMachine(maquina.Id)"><i class="fas fa-trash-alt"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+    </main>
+  </div>
+  

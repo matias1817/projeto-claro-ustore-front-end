@@ -1,0 +1,68 @@
+.dashboard-container {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .dashboard-header {
+    background-color: #a70012;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo span {
+    margin-left: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .logout {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .dashboard-main {
+    padding: 2rem;
+    background-color: #f9f9f9;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    max-width: 700px;
+    margin-bottom: 2rem;
+  }
+  .charts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .chart-box {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    padding: 1rem;
+    flex: 1 1 45%; /* Ocupa ~50% da largura e quebra se não couber */
+    max-width: 500px;
+    min-width: 280px;
+  }
+  
+.login-logo {
+    width: 40px;
+    /*margin-bottom: 1rem;*/
+  }
+  .create-account {
+    display: block;
+    text-align: right;
+    margin-top: 0;
+    padding: 5px;
+    font-size: 1.5rem;
+    color: #a70012;
+    text-decoration: underline;
+}
