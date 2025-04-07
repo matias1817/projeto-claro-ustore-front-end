@@ -81,6 +81,9 @@ export class MachineRegistrationComponent implements OnInit {
           this.router.navigate(['/machines']);
         },
         error: (err) => {
+          if (err.error.error=='Limite Excedido'){
+            this.toastr.error("Limite de VMs atingido, você pode aumentar seu limite em Meus Dados")
+          }
           this.toastr.error(`Erro ao ${this.maquinaId ? 'atualizar' : 'cadastrar'} máquina.`);
           console.error('Erro:', err);
         }
@@ -90,5 +93,9 @@ export class MachineRegistrationComponent implements OnInit {
 
   voltar() {
     this.router.navigate(['/machines']);
+  }
+  logout() {
+    localStorage.clear(); 
+    this.router.navigate(['/']); 
   }
 }

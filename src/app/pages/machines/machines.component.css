@@ -100,3 +100,15 @@
     color: inherit;
   }
   
+  .btn-voltar {
+    background-color: #f2f2f2;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-voltar:hover {
+    background-color: #e0e0e0;
+  }
